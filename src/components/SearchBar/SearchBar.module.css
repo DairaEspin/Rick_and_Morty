@@ -1,0 +1,15 @@
+.input{
+    color: var(--text-color);
+}
+
+.input:hover{
+    color: blueviolet;
+}
+
+.input::placeholder{
+    color: rgb(74, 7, 112);
+}
+
+.input:focus{
+    border-color: blueviolet;
+}
