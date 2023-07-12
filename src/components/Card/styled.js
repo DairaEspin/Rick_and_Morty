@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 export const Button = styled.button `
 display: inline-block;
-background-color: ${props => props.close ? 'white' : 'black'};
+background-color: ${props => props.close ? 'black' : 'white'};
 border-radius: 5px;
 width: fit-content;
 high: fit-content;
@@ -26,10 +26,10 @@ display: flex;
 justify-content: center;
 flex-direction: column;
 background: transparent;
-widht: fit content;
+widht: 300px;
 padding: 1.5rem;
 border-radius: 10px;
-border: 1px solid violet;
+border: 1px solid white;
 backdrop-filter: blur(5px);
 margin: 0.5rem;
 box-shadow: 13px 14px 80px 12px rgba(0,0,0,0.75);
@@ -39,7 +39,10 @@ box-shadow: 13px 14px 80px 12px rgba(0,0,0,0.75);
 export const Title = styled.h2 `
 // --text-color: violet;
 font-weight: 800;
-color: blue;
+color: #3f3f77;
+display: flex;
+margin-top: 1rem;
+margin-left: 44px;
 `
 
 export const Label = styled.h2 `
@@ -49,9 +52,10 @@ font-weight: 400;
 color: white;
 `
 
-export const image = styled.img `
-width: 30px;
-height: 60px;
-margin-top: 1rem;
-border-radius: 10px;
+export const Image = styled.img `
+width: 335px;
+height: 332px;
+margin-top: -6rem;
+border-radius: 20px;
+margin-left: 429px;
 `
