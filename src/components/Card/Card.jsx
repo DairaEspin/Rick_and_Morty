@@ -1,15 +1,45 @@
 import {Button, CardConteiner, Title, ButtonCont, Image, Label} from './styled.js'
 import {Link} from 'react-router-dom'
+import {useState, useEffect} from 'react'
+import {addFav, removeFav} from '../Redux/actions.js'
+import {connect} from 'react-redux'
 
-export default function Card({name, status, species, gender, origin, image, onClose, onFavorites, id}) {
+function Card({name, status, species, gender, origin, image, onClose, id, addFav, removeFav, myFavorites}) {
+   const [isFav, setIsFav] = useState (false)
 
+   useEffect (() => {
+myFavorites?.forEach((fav) =>{
+   if (fav.id === id){
+      setIsFav(true);
+   }
+});
+   }, [myFavorites]);
+
+   const handleFavorite = () =>{
+      if(isFav){
+         setIsFav(false)
+         removeFav(id)
+      } else{
+         setIsFav(true)
+         addFav({name, status, species, gender, origin, image, id})
+      }
+   }
+   
    return (
       <CardConteiner>
          <ButtonCont>
-         <Button onClick={onFavorites}> 💜 </Button>
+            {
+               isFav ? (
+                  <Button onClick={handleFavorite}> 🤍 </Button>
+               ) : (
+                  <Button onClick={handleFavorite}> 💚 </Button>
+               )
+            }
+         
+
          <Button clone onClick={() => onClose(id)}> ❌ </Button>
          </ButtonCont>
-         <Link to={`/detail/${name}`}><Title>{name}</Title></Link>
+         <Link to={`/detail/${id}`}> <Title>{name}</Title></Link>
          <Image src={image} alt={`No se encuentra la imagen de ${name}`}/>
          <ButtonCont>
          <Title> {name} |</Title>
@@ -23,3 +53,21 @@ export default function Card({name, status, species, gender, origin, image, onCl
       </CardConteiner>
    );
 }
+
+export function mapStateToProps (state){
+   return{
+      myFavorites: state.myFavorites
+   }
+}
+
+export function mapDispatchToProps (dispatch){
+   return{
+      addFav: function (character){
+         dispatch(addFav(character))
+      },
+      removeFav: function (id){
+         dispatch(removeFav(id))
+      }
+   }
+}
+export default connect (mapStateToProps, mapDispatchToProps)(Card)

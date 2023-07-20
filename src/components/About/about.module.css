@@ -1,0 +1,25 @@
+/* styles.module.css */
+.container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(241, 239, 239, 0.1);
+    background-image: url('../../Assets/imagen2.jpg');
+    background-size: cover;
+    background-position: cover;
+  }
+  
+  .title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+  }
+  
+  .description {
+    font-size: 16px;
+    color: #ffffff;
+  }
+  

@@ -1,6 +1,6 @@
 .App {
     text-align: center;
-    background-image: url('./Assets/rickandmorty.png');
-    background-size: center;
+    background-image: url('./Assets/imagen2.jpg');
+    background-size: cover;
     height: 100vw;
  }

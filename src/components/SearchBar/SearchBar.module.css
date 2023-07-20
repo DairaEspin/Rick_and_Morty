@@ -1,15 +1,17 @@
 .input{
     color: var(--text-color);
+    padding-top: 0.1rem;
+    margin-top: 1.5rem;
 }
 
 .input:hover{
-    color: blueviolet;
+    color: rgb(28, 163, 68);
 }
 
 .input::placeholder{
-    color: rgb(74, 7, 112);
+    color: rgb(7, 131, 73);
 }
 
 .input:focus{
-    border-color: blueviolet;
+    border-color: rgb(16, 179, 30);
 }

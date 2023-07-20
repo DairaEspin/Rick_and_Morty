@@ -7,6 +7,7 @@ export default function Cards({characters, onClose}) {
       {characters.map(character => 
             <Card
             key= {character.id}
+            id={character.id}
             name= {character.name}
             status= {character.status}
             species= {character.species}
@@ -14,7 +15,6 @@ export default function Cards({characters, onClose}) {
             origin= {character.origin.name}
             image= {character.image}
             onClose={onClose}
-            id={character.id}
             onFavorites={() => window.alert('Emulamos que tenemos un favorito')}
             />
             )}

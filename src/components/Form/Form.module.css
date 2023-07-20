@@ -1,0 +1,57 @@
+body {
+    /* Otras propiedades de estilo */
+    background-image: url(../../Assets/portal.jpg);
+    background-size: cover;
+    background-position: cover;
+  }
+  
+
+.label {
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  input {
+    display: block;
+    width: 50%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .danger {
+    color: red;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+
+  .container {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: cover;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(241, 239, 239, 0.1);
+    background-image: url('../../Assets/imagen3.jpg');
+    background-size: cover;
+    background-position: center;
+  }
+  

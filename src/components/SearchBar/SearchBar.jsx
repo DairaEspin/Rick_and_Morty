@@ -20,7 +20,7 @@ setCharacter(value)
    return (
       <>
       <div>
-          <input className={style.input} onChange={handleChange} value={character} id='inputSearch' type='search' placeholder="Search character" />
+          <input className={style.input} onChange={handleChange} value={character} id='inputSearch' type='search' placeholder="Search" />
          <button onClick={()=> onSearch(character) }><FcAdvance/></button>
       </div>
       </>
