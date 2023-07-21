@@ -7,9 +7,9 @@
     background-color: #fff;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(241, 239, 239, 0.1);
-    background-image: url('../../Assets/imagen2.jpg');
+    background-image: url('../../Assets/portalgif.gif');
     background-size: cover;
-    background-position: cover;
+    background-position: center;
   }
   
   .title {

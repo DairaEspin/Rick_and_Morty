@@ -39,7 +39,7 @@ myFavorites?.forEach((fav) =>{
 
          <Button clone onClick={() => onClose(id)}> ❌ </Button>
          </ButtonCont>
-         <Link to={`/detail/${id}`}> <Title>{name}</Title></Link>
+         <Link to={`/detail/${id}`}> <Title>{name} | {id} </Title></Link>
          <Image src={image} alt={`No se encuentra la imagen de ${name}`}/>
          <ButtonCont>
          <Title> {name} |</Title>

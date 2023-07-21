@@ -28,8 +28,8 @@ display: flex;
 flex-direction: column;
 align-items: center;
 background: transparent;
-widht: fit-content;
-height: fit-content;
+width: 400px;
+height: 600px;
 padding: 0.2rem;
 border-radius: 10px;
 border: 1px solid white;
@@ -42,7 +42,7 @@ box-shadow: 13px 14px 80px 12px rgba(0,0,0,0.75);
 export const Title = styled.h2`
 // --text-color: green;
 font-weight: 800;
-color: #3f3f77;
+color: green;
 display: flex;
 margin-top: 1rem;
 margin-left: 44px;
@@ -51,7 +51,7 @@ margin-left: 44px;
 export const Label = styled.h2`
 font-family: sans-serif;
 font-size: 0.8 rem;
-font-weight: 400;
+font-weight: 100px;
 color: white;
 `;
 

@@ -1,6 +1,5 @@
 body {
-    /* Otras propiedades de estilo */
-    background-image: url(../../Assets/portal.jpg);
+    background-image: url(../../Assets/fondorym.jpg);
     background-size: cover;
     background-position: cover;
   }
@@ -9,7 +8,7 @@ body {
 .label {
     font-size: 16px;
     font-weight: bold;
-    color: white;
+    color: rgb(2, 185, 27);
   }
   
   input {
@@ -26,6 +25,8 @@ body {
   }
   
   button {
+    width: 30%;
+    height: 30%;
     background-color: #4CAF50;
     color: white;
     border: none;
@@ -39,18 +40,18 @@ body {
   }
   
   button:hover {
-    background-color: #45a049;
+    background-color: #7445a0;
   }
 
   .container {
     max-width: 400px;
     margin: 0 auto;
     text-align: cover;
-    padding: 40px;
+    padding: 25px;
     background-color: #fff;
-    border-radius: 5px;
+    border-radius: 28px;
     box-shadow: 0 0 10px rgba(241, 239, 239, 0.1);
-    background-image: url('../../Assets/imagen3.jpg');
+    background-image: url('../../Assets/rickadmorty2.gif');
     background-size: cover;
     background-position: center;
   }

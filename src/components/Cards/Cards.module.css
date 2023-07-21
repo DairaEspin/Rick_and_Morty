@@ -1,7 +1,11 @@
 .cardsConteiner{
     display: grid;
     grid-template-columns: repeat (3, 1fr);
-    background-image: url('../../Assets/rickandmorty.png');
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    gap: 10px; 
+    padding: 20px; 
 }
 
 
