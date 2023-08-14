@@ -1,4 +1,5 @@
 import {ADD_FAV, REMOVE_FAV, ORDER_FAV, FILTER_FAV} from './action-type'
+import axios from "axios";
 
 const initialState = {
     myFavorites: [],
@@ -10,18 +11,26 @@ export function rootReducer (state = initialState, action){
     switch(action.type){
         case ADD_FAV:
             return{
-                ...state,
-                myFavourites: [...state.myFavorites, action.payload],
-                allFavorites: [...state.allFavorites, action.payload]
-
+                 ...state, myFavorites: payload, allCharacters: payload
             }
-            case REMOVE_FAV:
-                let newFavorites = state.myFavorites.filter(char => char.id !== action.payload)
-                return{
-                    ...state,
-                    myFavourites: newFavorites,
-                    allFavorites: newFavorites
-                }
+
+
+            // ...state,
+                // myFavourites: [...state.myFavorites, action.payload],
+                // allFavorites: [...state.allFavorites, action.payload]
+
+
+                case 'REMOVE_FAV':
+                    return { ...state, myFavorites: payload };
+
+                    
+            // case REMOVE_FAV:
+            //     let newFavorites = state.myFavorites.filter(char => char.id !== action.payload)
+            //     return{
+            //         ...state,
+            //         myFavourites: newFavorites,
+            //         allFavorites: newFavorites
+            //     }
 
             case ORDER_FAV:
             let favoritesOrdered = state.myFavorites.sort((a, b) => {
