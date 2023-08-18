@@ -11,7 +11,7 @@ export function rootReducer (state = initialState, action){
     switch(action.type){
         case ADD_FAV:
             return{
-                 ...state, myFavorites: payload, allCharacters: payload
+                 ...state, myFavorites: action.payload, allCharacters: action.payload
             }
 
 
@@ -21,7 +21,7 @@ export function rootReducer (state = initialState, action){
 
 
                 case 'REMOVE_FAV':
-                    return { ...state, myFavorites: payload };
+                    return { ...state, myFavorites: action.payload };
 
                     
             // case REMOVE_FAV:
