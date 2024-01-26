@@ -20,7 +20,7 @@ export function rootReducer (state = initialState, action){
                 // allFavorites: [...state.allFavorites, action.payload]
 
 
-                case 'REMOVE_FAV':
+                case REMOVE_FAV:
                     return { ...state, myFavorites: action.payload };
 
                     

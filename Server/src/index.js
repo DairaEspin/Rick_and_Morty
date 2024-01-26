@@ -1,7 +1,8 @@
 const express = require('express');
 const server = express();
 const PORT = 3001;
-const router = require ("../src/Routes/index")
+const router = require ("../Routes/index.js");
+const cors = require("cors");
 
 
 server.use((req, res, next) => {
@@ -17,6 +18,8 @@ server.use((req, res, next) => {
    );
    next();
 });
+
+server.use(cors);
 
 server.use(express.json())
 server.use("/rickandmorty", router)

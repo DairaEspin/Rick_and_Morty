@@ -10,6 +10,7 @@ function Favorites(){
     const optionsGender = ["All", "Female", "Genderless", "Male", "Unknow"]
     const dispatch = useDispatch()
     const myFavorites = useSelector(state => state.myFavorites)
+ 
 
     const handlerFilter = (event) => {
         dispatch(filterFav(event.target.value))
@@ -36,7 +37,7 @@ function Favorites(){
 
 
         <div className={style.cardConteiner}>{
-           myFavorites?.map(({id, name, gender, species, image, status, origin})=>(<Card 
+           myFavorites.map(({id, name, gender, species, image, status, origin})=>(<Card 
                 key={id}
                 id={id}
                 name={name}
@@ -50,6 +51,8 @@ function Favorites(){
             </div>
     )
 }
+
+
 
 // export function mapStateToProps(state){
 //     return{

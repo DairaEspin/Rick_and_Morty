@@ -14,8 +14,8 @@ function App() {
   const [characters, setCharacters] = useState([])
   const [access, setAccess] = useState(false)
 
-const {pathname} = useLocation()
-const navigate = useNavigate()
+const {pathname} = useLocation();
+const navigate = useNavigate();
 
    const EMAIL = "dairaespin@henry.com";
    const PASSWORD = "Holis1234";
@@ -27,8 +27,15 @@ const login = async (userData) =>{
          const {data} = await axios(URL + `?email=${email}&password=${password}`)
           const { access } = data;
            setAccess(data);
-          access ? navigate('/home') : alert ("Datos Incorrectos")
-      } catch (error){
+           console.log('Access:', access);
+
+           if (access) {
+            console.log('Redirecting to /home');
+            navigate('/home');
+         } else {
+            console.log('Datos Incorrectos');
+            alert('Datos Incorrectos');
+         }      } catch (error){
          console.log (error.message)
       }
 }

@@ -11,19 +11,21 @@ const [userData, setUserData] = useState({
 const [errors, setErrors] = useState({})
 
 const handleChange = (event) => {
-    let property = event.target.name
-    let value = event.target.value
-    setUserData({...userData, [property]: value})
-    setErrors(validation({...userData, [property]: value}))
+    let property = event.target.name;
+    let value = event.target.value;
+    console.log('handleChange - Property:', property, 'Value:', value);
+    setUserData({...userData, [property]: value});
+    setErrors(validation({...userData, [property]: value}));
 }
 
 const handleSubmit = (event) =>{
-    event.preventDefault()
+    event.preventDefault();
+    console.log('Form submitted! Data:', userData);
     login(userData);
 }
 
 return <div>
-    <form onSubmit={handleSubmit} className={style.container}>
+    <Form onSubmit={handleSubmit} className={style.container}>
         <label className={style.label}>Email: </label>
         <input type='text' 
         name='email' 
@@ -37,8 +39,8 @@ return <div>
         onChange = {handleChange} 
         value={userData.password} />
         {errors.password && (<p className={style.danger}>{errors.password} </p>)}
-        <button>SUBMIT</button>
-    </form>
+        <button type="submit">Login</button>
+    </Form>
 </div>
 
 }
